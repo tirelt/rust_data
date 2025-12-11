@@ -33,3 +33,7 @@ You can also use
 jupyter kernelspec list
 ```
 To see what kernels are available.
+
+## Plotly
+
+For interactive charts.
