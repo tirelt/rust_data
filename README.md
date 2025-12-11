@@ -13,3 +13,23 @@ python3 -m venv venv
 venv/bin/activate
 pip install -r requirements.txt
 ```
+
+2. Installing the `evcxr_jupyter` crate 
+```Bash
+cargo install --locked evcxr_jupyter
+```
+
+3. Install the kernal 
+```Bash
+env JUPYTER_PATH=$VIRTUAL_ENV/share/jupyter/ evcxr_jupyter --install
+```
+Note: check that `$VIRTUAL_ENV` returns the path to the virtual env.
+
+4. Set up VSCode 
+
+Make sure that the Jupyter extension is installed. Open the notebook, select Jupyter Kernel and you should see the rust Kernel.
+You can also use 
+```Bash
+jupyter kernelspec list
+```
+To see what kernels are available.
